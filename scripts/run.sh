@@ -1,3 +1,1 @@
-cc -std=c99 -Wall lispc.c ./lib/mpc.c -ledit -lm -o ./bin/lispc && echo "Compiled Lispc Successfully!\n"
-
-./bin/lispc
+cc -std=c99 -Wall lib/*.c src/**/*.c src/lispc.c  -ledit -lm -o ./bin/lispc && echo "Successfully Compiled Lispc!\n" && ./bin/lispc
