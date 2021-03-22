@@ -1,4 +1,5 @@
 #include "../../lib/mpc.h"
+#include "./eval.h"
 
 long eval_op(long x, char *op, long y)
 {
