@@ -1,4 +1,10 @@
 #include "../../lib/mpc.h"
+#include "./lval.h"
 
-long eval_op(long x, char *op, long y);
-long eval(mpc_ast_t *t);
+#ifndef EVAL_H
+#define EVAL_H
+
+lval eval_op(lval x, char *op, lval y);
+lval eval(mpc_ast_t *t);
+
+#endif

@@ -3,6 +3,7 @@
 #include "../lib/mpc.h"
 #include "./eval/eval.h"
 #include "./parser/parser.h"
+#include "./eval/lval.h"
 
 #ifdef _WIN32
 #include <string.h>
@@ -44,8 +45,8 @@ int main(int argc, char **argv)
     mpc_result_t r;
     if (mpc_parse("<stdin>", input, lispc_parser, &r))
     {
-      long result = eval(r.output);
-      printf("%li\n", result);
+      lval result = eval(r.output);
+      lval_println(result);
       mpc_ast_delete(r.output);
     }
     else
