@@ -1,0 +1,1 @@
+cc -std=c99 -Wall lispc.c -ledit -o bin/lispc && ./bin/lispc
