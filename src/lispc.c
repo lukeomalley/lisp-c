@@ -45,9 +45,10 @@ int main(int argc, char **argv)
     mpc_result_t r;
     if (mpc_parse("<stdin>", input, lispc_parser, &r))
     {
-      lval result = eval(r.output);
-      lval_println(result);
-      mpc_ast_delete(r.output);
+      // lval result = eval(r.output);
+      lval *x = lval_read(r.output);
+      lval_println(x);
+      lval_del(x);
     }
     else
     {

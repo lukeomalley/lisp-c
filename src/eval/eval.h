@@ -4,7 +4,7 @@
 #ifndef EVAL_H
 #define EVAL_H
 
-lval eval_op(lval x, char *op, lval y);
-lval eval(mpc_ast_t *t);
+lval *eval_op(lval *x, char *op, lval *y);
+lval *eval(mpc_ast_t *t);
 
 #endif
